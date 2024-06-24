@@ -21,6 +21,48 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Mengatur ukuran card */
+        .card {
+            width: 100%; /* Lebar penuh dalam container */
+            max-width: 400px; /* Batas lebar maksimal */
+            margin: 20px; /* Jarak di sekitar card */
+            padding: 20px; /* Jarak di dalam card */
+            border-radius: 10px; /* Membuat sudut melengkung */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+        }
+
+        /* Mengatur ukuran font dalam card */
+        .card-header h5 {
+            font-size: 1.5rem; /* Ukuran font untuk judul card */
+        }
+
+        .card-body {
+            font-size: 1rem; /* Ukuran font untuk isi card */
+        }
+
+        .card-body .form-group label {
+            font-size: 0.9rem; /* Ukuran font untuk label form */
+        }
+
+        .card-body .form-control {
+            font-size: 0.9rem; /* Ukuran font untuk input form */
+        }
+
+        .card-body .form-check-label {
+            font-size: 0.9rem; /* Ukuran font untuk label checkbox */
+        }
+
+        .card-body .btn {
+            font-size: 1rem; /* Ukuran font untuk tombol */
+        }
+
+        /* Mengatur ukuran font untuk teks kecil */
+        .lost-password a {
+            font-size: 0.8rem; /* Ukuran font untuk tautan 'Forget password?' */
+        }
+    </style>
 </head>
 <body>
         <!-- Topbar Start -->
@@ -28,11 +70,16 @@
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="">FAQs</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Help</a>
-                    <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="">Support</a>
+                    <div class="dropdown">
+                        <a class="text-dark dropdown-toggle" href="#" id="group4Dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Group 4_B</a>
+                        <div class="dropdown-menu rounded-0 m-0" aria-labelledby="group4Dropdown">
+                            <span class="dropdown-item text-dark mb-2"><i class="fa fa-angle-right mr-2"></i>Zahrotul Jannah - 066</span>
+                            <span class="dropdown-item text-dark mb-2"><i class="fa fa-angle-right mr-2"></i>Namira Anjani P - 081</span>
+                            <span class="dropdown-item text-dark mb-2"><i class="fa fa-angle-right mr-2"></i>Iffatuz Zahra - 092</span>
+                            <span class="dropdown-item text-dark"><i class="fa fa-angle-right mr-2"></i>Muhajirah Ulfah - 093</span>
+                        </div>
+                    </div>
+                    <span class="text-muted px-2"></span>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
@@ -69,81 +116,99 @@
     <div class="reset-container  d-flex justify-content-center align-items-center">
         <div class="card border">
             <div class="card-header">
-                <h5 class="mb-0">Reset Password</h5>
-                <p class="fs--1 text-600 mb-0">Have an account? <a href="login.html">Sign in</a></p>
+                <h5 class="mb-0" style="text-align: center;">RESET PASSWORD</h5>
+                <p class="fs--1 text-600 mb-0">Have an account? <a href="userLogin.html">Sign in</a></p>
             </div>
             <div class="card-body">
-                <form class="reset-form" method="post" action="/reset">
-                    <p>Enter your email address below. You may need to check your spam folder.</p>
+                <form class="reset-form" id="resetForm">
                     <div class="form-group">
-                        <label for="user_login">Username or email<span class="required">*</span></label>
+                        <label for="user_login">Username<span class="required">*</span></label>
                         <input type="text" class="form-control" id="user_login" name="user_login" autocomplete="username" required>
                     </div>
-                    <input type="hidden" name="wc_reset_password" value="true">
                     <button type="submit" class="btn btn-primary btn-block">Reset Password</button>
                 </form>
             </div>
         </div>
-    </div>
+    </div>    
     <!--Reset End-->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
-        <div class="row px-xl-5 pt-5">
-            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <a href="" class="text-decoration-none">
-                    <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Bookoo</h1>
-                </a>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>UMY, Yogyakarta, Indonesia</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>Ebookoo@gmail.com</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+628-123-456-789</p>
-            </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+<!-- Footer Start -->
+<div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+    <div class="row px-xl-5 pt-5">
+        <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+            <a href="" class="text-decoration-none">
+                <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Bookoo</h1>
+            </a>
+            <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>UMY, Yogyakarta, Indonesia</p>
+            <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>Ebookoo@gmail.com</p>
+            <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+628-123-456-789</p>
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <div class="row">
+                <div class="col-md-4 mb-5">
+                    <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                        <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                        <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                        <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
-                                    required="required" />
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
+                                required="required" />
+                        </div>
+                        <div>
+                            <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-        <div class="row border-top border-light mx-xl-5 py-4">
-            <div class="col-md-6 px-xl-0">
-                <p class="mb-md-0 text-center text-md-left text-dark">
-                    &copy; <a class="text-dark font-weight-semi-bold" href="#">Kelompok 4 - PDW - B</a>. All Rights Reserved.
-                </p>
-            </div>
-            <div class="col-md-6 px-xl-0 text-center text-md-right">
-                <img class="img-fluid" src="img/payments.png" alt="">
-            </div>
+    </div>
+    <div class="row border-top border-light mx-xl-5 py-4">
+        <div class="col-md-6 px-xl-0">
+            <p class="mb-md-0 text-center text-md-left text-dark">
+                &copy; <a class="text-dark font-weight-semi-bold" href="#">Kelompok 4 - PDW - B</a>. All Rights Reserved.
+            </p>
+        </div>
+        <div class="col-md-6 px-xl-0 text-center text-md-right">
+            <img class="img-fluid" src="img/payments.png" alt="">
         </div>
     </div>
-    <!-- Footer End -->
+</div>
+<!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
     <!-- JavaScript Libraries -->
+
+    <script>
+        document.getElementById('resetForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            var userLogin = document.getElementById('user_login').value;
+    
+            // Validation - You can add more complex validation if needed
+    
+            // Simulate reset password process (here's where you would typically send a request to your server)
+            // Replace this with actual backend logic to reset password
+    
+            // Assuming reset is successful
+            alert("Password berhasil direset!");
+    
+            // Reset form after alert
+            document.getElementById('resetForm').reset();
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>

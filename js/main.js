@@ -102,3 +102,5 @@
     
 })(jQuery);
 
+/*Fungsi ini mengatur kontrol kuantitas pada elemen dengan kelas quantity. Saat tombol plus (btn-plus) diklik, nilai kuantitas bertambah. 
+Saat tombol minus diklik, nilai kuantitas berkurang tetapi tidak kurang dari nol. */
